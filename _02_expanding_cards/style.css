@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: auto 100%; /*  define el tamaño de la imagen de fondo del elemento. La imagen puede dejarse a su tamaño natural, estirarse o limitarse para adaptarse al espacio disponible. */
+    background-position: center; /* establece la posición inicial de cada imagen de fondo. La posición es relativa a la capa de posición establecida por background-origin. */
+    background-repeat: no-repeat; /* Establece cómo se repiten las imágenes de fondo. Una imagen de fondo puede repetirse a lo largo de los ejes horizontal y vertical, o no repetirse en absoluto. */
+    height: 80vw;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5; /*  Establece cómo un item flexible crecerá o se reducirá para adaptarse al espacio disponible en su contenedor flexible. */
+    margin: 10px;
+    position: relative; /* establece cómo se coloca un elemento en un documento. Las propiedades superior, derecha, inferior e izquierda determinan la ubicación final de los elementos colocados. */
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px; /*  La propiedad participa en el establecimiento de la posición vertical de un elemento posicionado. No tiene ningún efecto sobre los elementos no posicionados.m */
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s; /* Explicar al final de terminar el archivo js */
+}
+
+@media(max-width: 480px){ /* se puede usar para aplicar parte de una hoja de estilos basada en el resultado de una o más consultas multimedia. Con él, especifica una consulta de medios y un bloque de CSS para aplicar al documento si y solo si la consulta de medios coincide con el dispositivo en el que se está utilizando el contenido. */
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4), /* Coincide con los elementos en función de su posición entre hermanos del mismo tipo (nombre de etiqueta). */
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}

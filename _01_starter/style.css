@@ -1,0 +1,14 @@
+/* Importamos el tipo de fuente que usaremos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+*{
+    box-sizing: border-box; /* box-sizing:Establece cómo se calcula el ancho y el alto totales de un elemento */
+}
+body {
+    font-family: 'Roboto', sans-serif; /* Indicamos el tipo de fuente */
+    display: flex; /* display: establece si un elemento se trata como un bloque o un elemento en linea */
+    flex-direction: column; /* flex-direction: Establece como se colocan los elementos flexibles en el contenedor flex definiendo el eje principal y la direcion (normal o invertida) */
+    align-items: center; /* align-items: establece el valor align-self en todos los elementos secundarios directos como grupo. En Flexbox, controla la alineación de elementos en el eje transversal. En Diseño de cuadrícula, controla la alineación de elementos en el eje de bloques dentro de su área de cuadrícula. */
+    justify-content: center; /* justify-contente: define cómo el explorador distribuye el espacio entre y alrededor de los elementos de contenido a lo largo del eje principal de un contenedor flexible y el eje en línea de un contenedor de cuadrícula. */
+    height: 100vh; /* height: Define la altura minima y maxima */
+    margin: 0; /* margin:  establece el área de margen en los cuatro lados de un elemento. */
+}
